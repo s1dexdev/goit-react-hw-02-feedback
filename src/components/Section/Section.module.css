@@ -1,0 +1,9 @@
+.container {
+  margin: 0 auto;
+  width: 400px;
+  text-align: center;
+}
+
+.title {
+  font-size: 34px;
+}
