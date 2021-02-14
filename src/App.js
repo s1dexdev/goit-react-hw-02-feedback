@@ -37,7 +37,7 @@ class App extends Component {
 
     return (
       <Section title="Please leave feedback">
-        <FeedbackOptions options={this.handleIncrement} />
+        <FeedbackOptions onLeaveFeedback={this.handleIncrement} />
         {countTotalFeedback() === 0 && (
           <Notification message="No feedback given" />
         )}
