@@ -1,14 +1,27 @@
 import React, { Component } from "react";
+import PropTypes from "prop-types";
 import Statistics from "./components/Statistics/Statistics";
 import FeedbackOptions from "./components/FeedbackOptions/FeedbackOptions";
 import Section from "./components/Section/Section";
 import Notification from "./components/Notification/Notification";
 
 class App extends Component {
-  state = {
+  static defaultProps = {
     good: 0,
     neutral: 0,
     bad: 0,
+  };
+
+  static propTypes = {
+    good: PropTypes.number.isRequired,
+    neutral: PropTypes.number.isRequired,
+    bad: PropTypes.number.isRequired,
+  };
+
+  state = {
+    good: this.props.good,
+    neutral: this.props.neutral,
+    bad: this.props.bad,
   };
 
   handleIncrement = (event) => {
