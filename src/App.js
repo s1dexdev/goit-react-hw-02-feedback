@@ -26,16 +26,10 @@ class App extends Component {
 
   handleIncrement = (event) => {
     const value = event.target.textContent.toLowerCase();
-    const updateState = (key) => {
-      return this.setState((prevState) => {
-        const newState = {};
 
-        newState[key] = prevState[key] + 1;
-
-        return newState;
-      });
-    };
-    updateState(value);
+    this.setState((prevState) => {
+      return { [value]: prevState[value] + 1 };
+    });
   };
 
   render() {
