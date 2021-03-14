@@ -17,13 +17,13 @@ const App = function () {
 
     switch (value) {
       case "good":
-        setGoodReview(goodReview + 1);
+        setGoodReview((prevState) => prevState + 1);
         break;
       case "neutral":
-        setNeutralReview(neutralReview + 1);
+        setNeutralReview((prevState) => prevState + 1);
         break;
       case "bad":
-        setBadReview(badReview + 1);
+        setBadReview((prevState) => prevState + 1);
         break;
     }
   };
